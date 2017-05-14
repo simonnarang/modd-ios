@@ -15,7 +15,7 @@
 		132E39901CE7801000C7F550 /* ModdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E398F1CE7801000C7F550 /* ModdTests.swift */; };
 		132E399B1CE7801000C7F550 /* ModdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E399A1CE7801000C7F550 /* ModdUITests.swift */; };
 		132E39A91CE782AB00C7F550 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E39A81CE782AB00C7F550 /* TableViewController.swift */; };
-		135EA5131CE79B0E00A10758 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EA5121CE79B0E00A10758 /* TableViewCell.swift */; };
+		135EA5131CE79B0E00A10758 /* ModTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EA5121CE79B0E00A10758 /* ModTableViewCell.swift */; };
 		135EA5151CE7B1AF00A10758 /* ModImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EA5141CE7B1AF00A10758 /* ModImage.swift */; };
 		135EA5171CE7C16E00A10758 /* FavsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EA5161CE7C16E00A10758 /* FavsTableViewCell.swift */; };
 		135EA5191CE7C19300A10758 /* FavsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EA5181CE7C19300A10758 /* FavsTableViewController.swift */; };
@@ -70,7 +70,7 @@
 		132E399A1CE7801000C7F550 /* ModdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModdUITests.swift; sourceTree = "<group>"; };
 		132E399C1CE7801000C7F550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132E39A81CE782AB00C7F550 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		135EA5121CE79B0E00A10758 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		135EA5121CE79B0E00A10758 /* ModTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModTableViewCell.swift; sourceTree = "<group>"; };
 		135EA5141CE7B1AF00A10758 /* ModImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModImage.swift; sourceTree = "<group>"; };
 		135EA5161CE7C16E00A10758 /* FavsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavsTableViewCell.swift; sourceTree = "<group>"; };
 		135EA5181CE7C19300A10758 /* FavsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavsTableViewController.swift; sourceTree = "<group>"; };
@@ -155,11 +155,11 @@
 				132E397A1CE7801000C7F550 /* AppDelegate.swift */,
 				132E397C1CE7801000C7F550 /* ViewController.swift */,
 				132E39A81CE782AB00C7F550 /* TableViewController.swift */,
+				135EA5121CE79B0E00A10758 /* ModTableViewCell.swift */,
 				132E397E1CE7801000C7F550 /* Main.storyboard */,
 				132E39811CE7801000C7F550 /* Assets.xcassets */,
 				132E39831CE7801000C7F550 /* LaunchScreen.storyboard */,
 				132E39861CE7801000C7F550 /* Info.plist */,
-				135EA5121CE79B0E00A10758 /* TableViewCell.swift */,
 				135EA5141CE7B1AF00A10758 /* ModImage.swift */,
 				135EA5161CE7C16E00A10758 /* FavsTableViewCell.swift */,
 				135EA5181CE7C19300A10758 /* FavsTableViewController.swift */,
@@ -202,13 +202,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132E399F1CE7801000C7F550 /* Build configuration list for PBXNativeTarget "Modd" */;
 			buildPhases = (
-				7E67FE2B7A6506FD135BFCCB /* 📦 Check Pods Manifest.lock */,
+				7E67FE2B7A6506FD135BFCCB /* [CP] Check Pods Manifest.lock */,
 				132E39731CE7801000C7F550 /* Sources */,
 				132E39741CE7801000C7F550 /* Frameworks */,
 				132E39751CE7801000C7F550 /* Resources */,
 				132E39C61CE788A800C7F550 /* Embed Frameworks */,
-				20FA1F5392567B361918CB87 /* 📦 Embed Pods Frameworks */,
-				7A336EBE50E3C574C64A40CC /* 📦 Copy Pods Resources */,
+				20FA1F5392567B361918CB87 /* [CP] Embed Pods Frameworks */,
+				7A336EBE50E3C574C64A40CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,12 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132E39A21CE7801000C7F550 /* Build configuration list for PBXNativeTarget "ModdTests" */;
 			buildPhases = (
-				03DE1248AB118F7B3915111A /* 📦 Check Pods Manifest.lock */,
+				03DE1248AB118F7B3915111A /* [CP] Check Pods Manifest.lock */,
 				132E39871CE7801000C7F550 /* Sources */,
 				132E39881CE7801000C7F550 /* Frameworks */,
 				132E39891CE7801000C7F550 /* Resources */,
-				69AFC2C6E668FF1624344925 /* 📦 Embed Pods Frameworks */,
-				68CCC4EAB38AA15B5AE9F9CF /* 📦 Copy Pods Resources */,
+				69AFC2C6E668FF1624344925 /* [CP] Embed Pods Frameworks */,
+				68CCC4EAB38AA15B5AE9F9CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,11 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132E39A51CE7801000C7F550 /* Build configuration list for PBXNativeTarget "ModdUITests" */;
 			buildPhases = (
-				B0EC3B1E8BC1B684B605486F /* 📦 Check Pods Manifest.lock */,
+				B0EC3B1E8BC1B684B605486F /* [CP] Check Pods Manifest.lock */,
 				132E39921CE7801000C7F550 /* Sources */,
 				132E39931CE7801000C7F550 /* Frameworks */,
 				132E39941CE7801000C7F550 /* Resources */,
-				7E22F6E164541B7AB61D9A7F /* 📦 Copy Pods Resources */,
+				7E22F6E164541B7AB61D9A7F /* [CP] Copy Pods Resources */,
+				1314C9ED332E85132AF939D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,14 +273,17 @@
 				TargetAttributes = {
 					132E39761CE7801000C7F550 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H7JPQZ2343;
+						DevelopmentTeam = RNPQ279435;
+						LastSwiftMigration = 0830;
 					};
 					132E398A1CE7801000C7F550 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 132E39761CE7801000C7F550;
 					};
 					132E39951CE7801000C7F550 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 132E39761CE7801000C7F550;
 					};
 				};
@@ -332,29 +336,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03DE1248AB118F7B3915111A /* 📦 Check Pods Manifest.lock */ = {
+		03DE1248AB118F7B3915111A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		20FA1F5392567B361918CB87 /* 📦 Embed Pods Frameworks */ = {
+		1314C9ED332E85132AF939D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModdUITests/Pods-ModdUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20FA1F5392567B361918CB87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,14 +381,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Modd/Pods-Modd-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68CCC4EAB38AA15B5AE9F9CF /* 📦 Copy Pods Resources */ = {
+		68CCC4EAB38AA15B5AE9F9CF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,14 +396,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModdTests/Pods-ModdTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69AFC2C6E668FF1624344925 /* 📦 Embed Pods Frameworks */ = {
+		69AFC2C6E668FF1624344925 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,14 +411,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModdTests/Pods-ModdTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A336EBE50E3C574C64A40CC /* 📦 Copy Pods Resources */ = {
+		7A336EBE50E3C574C64A40CC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,14 +426,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Modd/Pods-Modd-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E22F6E164541B7AB61D9A7F /* 📦 Copy Pods Resources */ = {
+		7E22F6E164541B7AB61D9A7F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,34 +441,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModdUITests/Pods-ModdUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E67FE2B7A6506FD135BFCCB /* 📦 Check Pods Manifest.lock */ = {
+		7E67FE2B7A6506FD135BFCCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B0EC3B1E8BC1B684B605486F /* 📦 Check Pods Manifest.lock */ = {
+		B0EC3B1E8BC1B684B605486F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -462,7 +481,7 @@
 				132E397D1CE7801000C7F550 /* ViewController.swift in Sources */,
 				135EA5171CE7C16E00A10758 /* FavsTableViewCell.swift in Sources */,
 				135EA5191CE7C19300A10758 /* FavsTableViewController.swift in Sources */,
-				135EA5131CE79B0E00A10758 /* TableViewCell.swift in Sources */,
+				135EA5131CE79B0E00A10758 /* ModTableViewCell.swift in Sources */,
 				132E39A91CE782AB00C7F550 /* TableViewController.swift in Sources */,
 				135EA5151CE7B1AF00A10758 /* ModImage.swift in Sources */,
 				132E397B1CE7801000C7F550 /* AppDelegate.swift in Sources */,
@@ -612,13 +631,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RNPQ279435;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Modd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.Modd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -629,13 +650,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RNPQ279435;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Modd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.Modd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -648,6 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.ModdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Modd.app/Modd";
 			};
 			name = Debug;
@@ -661,6 +685,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.ModdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Modd.app/Modd";
 			};
 			name = Release;
@@ -673,6 +698,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.ModdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Modd;
 			};
 			name = Debug;
@@ -685,6 +711,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.modd.ModdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Modd;
 			};
 			name = Release;

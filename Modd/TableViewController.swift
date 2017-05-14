@@ -15,25 +15,32 @@ class TableViewController: UITableViewController {
     var JAYSON = [(String, String)]()
     static var favorites = [String]()
     
+    @IBAction func refresh(_ sender: Any) {
+        self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-            Alamofire.request(.GET, "http://modlist.mcf.li/api/v3/1.8.json")
+            Alamofire.request("http://modlist.mcf.li/api/v3/1.9.json")
             .responseJSON { response in
                 switch response.result {
-                case .Success:
-                    if let value = response.result.value {
-                        let json = JSON(value)
-                        print("JSON: \(json)")
-                                                }
-                        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-                    }
-                case .Failure(let error):
-                    print(error)
+                    case .success:
+                        if let value = response.result.value {
+                            let json = JSON(value)
+                            for i in 0...json.count {
+                                print("JSON: \(json[i]["name"])")
+                                let name = String(describing: json[i]["name"])
+                                let link = String(describing: json[i]["link"])
+                                self.JAYSON.append((name, link))
+                            }
+                        }
+                        self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
+                    case .failure(let error):
+                        print(error)
                 }
-
-        }
+            }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,7 +49,7 @@ class TableViewController: UITableViewController {
     }
     
     func handleRefresh(refreshControl: UIRefreshControl) {
-        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+        self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
         refreshControl.endRefreshing()
     }
 
@@ -53,25 +60,45 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1    }
+        print("YOTOYY")
+        return 1
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return JAYSON.count
     }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        print("nantu")
+        return JAYSON.count
+    }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+    func heartTapped(_ sender: UITapGestureRecognizer) {
+        
+        let tapLocation = sender.location(in: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: tapLocation)
+        if indexPath?.row != nil {
+            if let index = TableViewController.favorites.index(of: self.JAYSON[indexPath!.row].0) {
+                TableViewController.favorites.remove(at: index)
+            }else{
+                
+                TableViewController.favorites.append(self.JAYSON[indexPath!.row].0)
+                print("\(self.JAYSON[indexPath!.row].0) at row \(String(describing: indexPath?.row)) just favorited")
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! ModTableViewCell
 
         let lame = self.JAYSON[indexPath.row]
         // Configure the cell...
         cell.mod.text = lame.0
+        print("TOB")
         cell.heart.row = indexPath.row
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(TableViewController.heartTapped(_:)))
-        cell.heart.userInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(self.heartTapped(_:)))
+        cell.heart.isUserInteractionEnabled = true
         cell.heart.addGestureRecognizer(tapGestureRecognizer)
         
         if TableViewController.favorites.contains(lame.0) {
@@ -80,29 +107,18 @@ class TableViewController: UITableViewController {
            cell.heart.image = UIImage(named: "heart")
         }
         
+        self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
+        
         return cell
+        
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        UIApplication.sharedApplication().openURL(NSURL(string: self.JAYSON[indexPath.row].1)!)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIApplication.shared.openURL(NSURL(string: self.JAYSON[indexPath.row].1)! as URL)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
     
-    func heartTapped(img: UITapGestureRecognizer) {
-        
-        let tapLocation = img.locationInView(self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(tapLocation)
-        if indexPath?.row != nil {
-            if let index = TableViewController.favorites.indexOf(self.JAYSON[indexPath!.row].0) {
-                TableViewController.favorites.removeAtIndex(index)
-            }else{
-
-                TableViewController.favorites.append(self.JAYSON[indexPath!.row].0)
-                print("\(self.JAYSON[indexPath!.row].0) at row \(indexPath?.row) just favorited")
-            }
-        }
-        self.tableView.reloadData()
-        
-    }
+    
+}
     
     /*
     // Override to support conditional editing of the table view.
@@ -149,4 +165,4 @@ class TableViewController: UITableViewController {
     }
     */
 
-}
+

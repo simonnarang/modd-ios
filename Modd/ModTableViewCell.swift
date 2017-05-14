@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class ModTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mod: UILabel!
     @IBOutlet weak var heart: ModImage!
@@ -18,7 +18,7 @@ class TableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }

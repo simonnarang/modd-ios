@@ -1,45 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gHF-ch-R3K">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gHF-ch-R3K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Minecrafter.Reg.ttf">
+        <array key="Minecrafter.Reg.ttf">
             <string>Minecrafter</string>
-            <string>Minecrafter</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--MODDS-->
         <scene sceneID="rKw-2b-Yjh">
             <objects>
-                <tableViewController id="P2M-KB-Q7a" customClass="TableViewController" customModule="Modd" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="P2M-KB-Q7a" customClass="TableViewController" customModule="Modd" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" id="raU-2d-VTM">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="i4X-2h-PLX" customClass="TableViewCell" customModule="Modd" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="91"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="i4X-2h-PLX" customClass="ModTableViewCell" customModule="Modd" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4X-2h-PLX" id="4ps-a3-ZNO">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ym5-5P-bsA" customClass="ModImage" customModule="Modd" customModuleProvider="target">
-                                            <rect key="frame" x="552" y="24" width="40" height="40"/>
+                                            <rect key="frame" x="327" y="24" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="wOz-OZ-s32"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vY-24-L9y">
-                                            <rect key="frame" x="215" y="24" width="170" height="41"/>
+                                            <rect key="frame" x="102.5" y="24" width="170" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="170" id="pxR-YM-Ybf"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -52,8 +56,9 @@
                                         <constraint firstItem="ym5-5P-bsA" firstAttribute="centerY" secondItem="1vY-24-L9y" secondAttribute="centerY" id="sJy-Ck-Vmh"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="heart" destination="ym5-5P-bsA" id="dfX-4g-u0p"/>
                                     <outlet property="mod" destination="1vY-24-L9y" id="jZD-2m-hCP"/>
@@ -65,21 +70,30 @@
                             <outlet property="delegate" destination="P2M-KB-Q7a" id="he6-Hw-bCZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MODDS" id="9te-k8-RZR"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="MODDS" id="9te-k8-RZR">
+                        <barButtonItem key="rightBarButtonItem" title="REFRESH" id="kwN-GX-z8R">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="refresh:" destination="P2M-KB-Q7a" id="D3d-up-R2Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndC-ER-kOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1249" y="1938"/>
         </scene>
-        <!--MODDS-->
+        <!--Navigation Controller-->
         <scene sceneID="neQ-Q5-q2j">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iZX-uc-ASk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MODDS" id="qgN-le-63X"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="qgN-le-63X"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="ggX-ZV-GFJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="ggX-ZV-GFJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -97,9 +111,10 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gHF-ch-R3K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="KSs-WW-UvH">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="KSs-WW-UvH">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="iZX-uc-ASk" kind="relationship" relationship="viewControllers" id="Oqt-05-f3b"/>
@@ -110,14 +125,14 @@
             </objects>
             <point key="canvasLocation" x="-927" y="269"/>
         </scene>
-        <!--FAVS-->
+        <!--Navigation Controller-->
         <scene sceneID="5S7-Ho-ekz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sdh-5Z-e5q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FAVS" id="vi2-nP-gCi"/>
+                    <tabBarItem key="tabBarItem" selectedImage="heart" systemItem="favorites" id="vi2-nP-gCi"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="9qu-1r-1Ub">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="9qu-1r-1Ub">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -133,30 +148,30 @@
         <!--FAVS-->
         <scene sceneID="rMa-tW-OBs">
             <objects>
-                <tableViewController id="gvb-gM-HZJ" customClass="FavsTableViewController" customModule="Modd" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gvb-gM-HZJ" customClass="FavsTableViewController" customModule="Modd" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" id="wFr-vn-A2U">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="DDU-pT-sw8" customClass="FavsTableViewCell" customModule="Modd" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="91"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="DDU-pT-sw8" customClass="FavsTableViewCell" customModule="Modd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DDU-pT-sw8" id="utC-W2-0wL">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKa-Zu-n2D">
-                                            <rect key="frame" x="215" y="24" width="170" height="41"/>
+                                            <rect key="frame" x="102.5" y="24" width="170" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="170" id="aak-QL-ONh"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-kX-suf" customClass="ModImage" customModule="Modd" customModuleProvider="target">
-                                            <rect key="frame" x="552" y="24" width="40" height="40"/>
+                                            <rect key="frame" x="327" y="24" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="GCu-xI-aoV"/>
                                             </constraints>
@@ -171,7 +186,7 @@
                                         <constraint firstItem="dHs-kX-suf" firstAttribute="top" secondItem="SKa-Zu-n2D" secondAttribute="top" id="tff-Xk-kbs"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                 <connections>
                                     <outlet property="favMod" destination="SKa-Zu-n2D" id="HCb-Zg-r9j"/>
@@ -186,9 +201,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="FAVS" id="KNm-1p-8u7">
                         <barButtonItem key="rightBarButtonItem" title="REFRESH" id="Cdz-Rf-ENQ">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="refresh:" destination="gvb-gM-HZJ" id="RTH-HG-RrW"/>
+                                <action selector="refreshWithSender:" destination="gvb-gM-HZJ" id="9e2-kW-DE4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -200,6 +215,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" width="128" height="128"/>
+        <image name="heart" width="64" height="64"/>
     </resources>
 </document>
